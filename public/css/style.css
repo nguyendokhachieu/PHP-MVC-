@@ -1,0 +1,140 @@
+.wrap {
+    width: 1080px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.header a {
+    padding: 5px 15px;
+    border: 1px solid blue;
+}
+
+.header a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.content #loginForm .row {
+    margin-bottom: 10px;
+}
+
+.content #loginForm .row input {
+    padding: 5px 10px;
+    border: 1px solid blue;
+    outline: none;
+    background-color: #fff;
+}
+
+.content #loginForm .row input[type=submit] {
+    cursor: pointer;
+}
+
+.content #loginForm .row input[type=submit]:hover {
+    background-color: blue;
+    color: #fff;
+}
+
+.active {
+    background-color: blue;
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.group-list {
+    padding: 10px 0;
+}
+
+.table {
+}
+
+.row {
+    display: flex;
+    margin-bottom: 1px;
+}
+
+.col-1 {
+    width: 15%;
+}
+
+.col-2 {
+    width: 30%;
+}
+
+.col-3 {
+    width: 20%;
+}
+
+.col-4 {
+    width: 15%;
+}
+
+.col-5 {
+    width: 10%;
+}
+
+.col-6 {
+    width: 10%;
+}
+
+.col {
+    text-align: center;
+    border: 1px solid red;
+    padding: 7px 0;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: 1px solid blue;
+    color: blue;
+    background-color: #fff;
+}
+
+.row.head .col {
+    text-align: center;
+    border: 1px solid red;
+    padding: 7px 0;
+    color: red;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 101;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 111;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.75);
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.display-none {
+    display: none;
+}
+
+input#delete, input#cancel {
+    padding: 5px 15px;
+    border: 1px solid blue;
+    background-color: #fff;
+    cursor: pointer;
+}

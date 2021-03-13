@@ -1,6 +1,5 @@
 <?php
-//thực hiện điều hướng controller và action trên URL đến đúng controller
-
+    //thực hiện điều hướng controller và action trên URL đến đúng controller
     class Bootstrap {
         public function __construct() {
             $controllerURL = (isset($_GET['controller'])) ? $_GET['controller'] : 'index';
@@ -10,27 +9,26 @@
 
             $fileName = './controllers/' . $controllerName . '.php';
 
-            $isGoing = true;
-
             if (file_exists($fileName)) {
                 require_once ($fileName);
                 $control = new $controllerName();
 
                 if (method_exists($control, $actionURL)) {
-                    $control->$actionURL();
+                    $control->loadModel($controllerName); // gọi model
+                    $control->$actionURL(); // gọi phương thức trong controller
                 } else {
-                    $isGoing = false;
+                    $this->error();
                 }
 
             } else {
-                $isGoing = false;
-            }
-            
-            if (!$isGoing) {
-                require_once './controllers/ErrorRequest.php';
-                $e = new ErrorRequest();
-            }
-            
+                $this->error();
+            }            
+        }
+
+        private function error() {
+            require_once './controllers/ErrorRequest.php';
+            $e = new ErrorRequest();
+            $e->index();
         }
     }
 ?>

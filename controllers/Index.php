@@ -1,15 +1,15 @@
 <?php
-    class Index {
+    class Index extends Controller {
         public function __construct() {
-            echo __METHOD__;
+            parent::__construct(); //lấy view
         }
 
-        public function index() {
-            echo __METHOD__;
+        public function index() { //hiển thị danh sách
+            $this->view->render('Index/index');
         }
 
         public function add() {
-            echo __METHOD__;
+            $this->view->render('Index/add');
         }
     }
 ?>
